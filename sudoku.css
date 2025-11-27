@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Center content but allow full width on phones */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    max-width: 600px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    background-color: #F2E5CB !important;
+}
+
+#errors {
+    color: coral;
+    margin: 4px 0;
+}
+
+/* BOARD */
+#board {
+    /* Fit on small phones: max 90% of viewport width */
+    width: min(90vw, 450px);
+    aspect-ratio: 1 / 1;             /* keep it a square */
+    margin: 0 auto;
+    background-color: #F2E5CB;
+    border: 2px solid #31250C;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* DIGITS row */
+#digits {
+    width: min(90vw, 450px);
+    /* let height grow naturally */
+    margin: 8px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* TILES ON BOARD */
+.tile {
+    /* 9 tiles per row, no hard-coded px */
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+
+    border: 1px solid #624918;
+
+    font-size: clamp(12px, 4vw, 20px);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DIGIT BUTTONS */
+.number {
+    /* size relative to screen, but with max for desktop */
+    width: 9vw;
+    height: 9vw;
+    max-width: 44px;
+    max-height: 44px;
+
+    border: 2px solid #31250C;
+    margin: 2px;
+
+    font-size: clamp(12px, 4vw, 20px);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-selected {
+    background-color: #D7AE5B;
+}
+
+.tile-start {
+    background-color: #D7AE5B;
+}
+
+.horizontal-line {
+    border-bottom: 2px solid #31250C;
+}
+
+.vertical-line {
+    border-right: 2px solid #31250C;
+}
+
+/* Difficulty buttons: make them shrink on phones */
+button {
+    padding: 4px 8px;
+    margin: 2px;
+    font-size: clamp(12px, 3.5vw, 16px);
+}

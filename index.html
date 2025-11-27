@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+        <title>Sudoku</title>
+
+        <link rel="stylesheet" href="sudoku.css">
+        <!-- links for NES.css as from github repo -->
+        <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
+        <!-- minify -->
+        <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+        <!-- latest -->
+        <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+        <!-- core style only -->
+        <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+        <link href="dist/rpgui.css" rel="stylesheet" type="text/css" >
+        <script src="dist/rpgui.js"></script>
+        <script src="sudoku.js"></script>
+    </head>
+
+    <body>
+        <div class="nes-container with-title is-centered">
+            <div id="controls"></div>
+            <button class="nes-btn is-success" onclick="setDifficultyE()">Easy</button>
+            <button class="nes-btn is-warning" onclick="setDifficultyM()">Medium</button>
+            <button class="nes-btn is-error" onclick="setDifficultyH()">Hard</button>
+            <h2 id="errors">0</h2>
+            <div id="board"></div>
+            <br>
+            <div id="digits"></div>
+        </div>
+        
+
+        
+    </body>
+</html>
